@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    // background-color: whitesmoke;
     
 }
 .title1{
@@ -15,6 +14,13 @@
     background-color: rgb(218, 240, 255);
     
 }
+.profile-main{
+  background-color: whitesmoke;
+  height: 100vh;
+  overflow:auto;
+  
+}
+
 .avatar{
     height:10em;
 
@@ -50,6 +56,13 @@ h1 {
 /*
 * user card
 */
+.profile-card{
+  height:100%;
+  
+  display: flex;
+  align-items: center;
+
+}
 
 .cssui-usercard{
     box-sizing: border-box;
@@ -60,8 +73,10 @@ h1 {
     margin: 1rem auto 1rem;
     position: relative;
     z-index: 5;
-    margin-top: 3em;
+    margin-top: 0em;
     margin-bottom: 2em;
+    height: max-content;
+    
   }
   
   @media screen and (min-width: 641px){
@@ -84,6 +99,7 @@ h1 {
     margin-top: 1em;
     flex-grow: 2;
     color: #000;
+    width:100%;
   }
   
   .cssui-usercard__header{
@@ -116,6 +132,7 @@ h1 {
   
   .cssui-usercard__post{
     display: block;
+    font-size: xx-large;
   }
   
   .cssui-usercard__title{
@@ -124,7 +141,7 @@ h1 {
     font-size: 2.4rem;
     font-weight: 300;
     color: #fff;  
-    margin-top: 5em;
+    margin-top: 3em;
     background-color: #2576d2;  
   }
   
@@ -214,7 +231,7 @@ h1 {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    height: 50rem;
+    height: 41rem;
   }
   
   .cssui-slider__slides{
@@ -370,5 +387,4 @@ h1 {
   .melnik909{
     margin-left: 2rem;
   }
-  
   
