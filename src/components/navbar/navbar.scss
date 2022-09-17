@@ -1,0 +1,12 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+.navbar{width:100%;}
+.navbar-brand{
+    align-items: center;
+    align-content: space-around;
+}
+strong{
+    padding: 0;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+}

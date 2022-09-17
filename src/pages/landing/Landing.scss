@@ -1,0 +1,120 @@
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+  }
+  
+  .left {
+    left: 0px;
+
+  }
+  
+  .right {
+    right: 0;
+
+  }
+
+  .__button{
+
+    position: absolute;
+    width: 5rem;
+    height: 3rem;
+    left: 2.5rem;
+    top: 3rem;
+
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    img {
+      width: 700px;
+    }
+     p {
+       margin-top: 2rem;
+       margin-bottom: 3rem;
+       font-size: 17px;
+       font-weight: 400;
+     }
+     .welcome-message {
+       font-size: 30px;
+     }
+
+  }
+
+  .landingButton {
+    margin-top: 4rem;
+    margin-right: 2rem;
+    width: 10rem;
+    background-color: white;
+    border: none;
+    color: #1A3152 !important;
+    text-decoration: none;
+    padding: .8rem 2rem;
+    font-size: 18px;
+    border: 1px solid #333;
+    
+    &:hover {
+      background-color: #1A3152;
+      color: #ffffff !important;
+    }
+  }
+
+  .maintitle{
+    position: absolute;
+    width: 30rem;
+    height: 4.5rem;
+    left: 8rem;
+    top: 1.5rem;
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+    color: #1A3152;
+
+    img {
+      padding: 10px;
+
+    }
+
+  }
+
+  ///////////////  RESPONSIVE CSS ///////////////////
+@media(max-width : 500){
+
+  .split {
+ 
+    padding-top: 10px;
+
+  }
+  .left {
+    display: inline-block;
+    top: 0px;
+    position: absolute;
+
+  }
+  
+  .right {
+   
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+
+  }
+}
