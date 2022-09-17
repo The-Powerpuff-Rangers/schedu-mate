@@ -15,8 +15,6 @@ const Details = () => {
   const [program, setProgram] = useState("");
   const [year, setYear] = useState("");
   const [studyTerm, setStudyTerm] = useState("");
-  const [occupation, setOccupation] = useState("");
-  const [profession, setProfession] = useState("");
 
   // Navigation
   const navigate = useNavigate();
@@ -189,26 +187,6 @@ const Details = () => {
                     <option>4B</option>
                     <option>5+</option>
                   </select>
-                </div>
-                {/* Occupation */}
-                <div className="input-field">
-                  <label>Occupation</label>
-                  <input
-                    onChange={(e) => setOccupation(e.target.value)}
-                    type="text"
-                    placeholder="Enter Occupation"
-                    required
-                  ></input>
-                </div>
-                {/* Professional Title */}
-                <div className="input-field">
-                  <label>Professional Title</label>
-                  <input
-                    onChange={(e) => setProfession(e.target.value)}
-                    type="text"
-                    placeholder="Enter Occupation"
-                    required
-                  ></input>
                 </div>
               </div>
               {/* Submit */}
