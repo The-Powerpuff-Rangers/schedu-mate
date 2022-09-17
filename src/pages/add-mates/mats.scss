@@ -1,0 +1,29 @@
+body {
+    background-color: #f8eacf;
+}
+
+.searchbar {
+    width: 50rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+}
+
+.searchbar input{
+    background-color: white !important;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}

@@ -1,0 +1,80 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+.form{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.root{
+    max-height: fit-content;
+}
+.form-card{
+    justify-content: center;
+    display: flex;
+    width:60%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2em;
+    padding:2em;
+    margin:0em;
+    box-shadow: 1em 1em 3em #c9c9c9;
+    .add-class{
+        width:80%;
+    }
+    label{
+        font-size: large;
+        font-weight: 300;
+    }
+    .control{
+        width:100%;
+    }
+    .is-grouped{
+        justify-content:flex-start;
+        margin:0;
+        padding:0;
+        width:6em;
+    }
+    .control{
+        button{
+            width:5em;
+            font-size:small;
+        }
+    }
+}
+
+.add-class{
+    align-self: center;
+}
+header{
+    background-color: rgb(218, 240, 255);
+    padding:0.5em;
+}
+.background {
+    // background-color:#FFE5B4 ;
+}
+
+header {
+    // position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -8rem;
+    margin-top: 3rem;
+
+}
+
+
+
+
+.body-ctn {
+    // background-color: #FFE5B4;
+    // flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}

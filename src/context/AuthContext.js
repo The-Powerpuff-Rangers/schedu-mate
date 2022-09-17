@@ -7,11 +7,15 @@ export const AuthContextProvider = ({ children }) => {
   // Set state for user (otherwise no access to it)
   const [user, setUser] = useState({});
 
-  const [userId, setUserId] = useState("");
-
   // Sign up function
-  const createUser = (email, password) => {
-    return auth.create("unique()", email, password);
+  const createUser = async (email, password) => {
+    await auth.create("unique()", email, password);
+    const userSession = await createUserSession(email, password);
+    return userSession;
+  };
+
+  const createUserSession = (email, password) => {
+    return auth.createEmailSession(email, password);
   };
 
   // Login function
@@ -22,6 +26,10 @@ export const AuthContextProvider = ({ children }) => {
   // Logout function
   const logout = () => {
     return auth.deleteSession("current");
+  };
+
+  const getUser = async () => {
+    return auth.get();
   };
 
   // useEffect(() => {
@@ -40,17 +48,16 @@ export const AuthContextProvider = ({ children }) => {
     const userCallData = async () => {
       console.log("Hello");
       const userData = await auth.get();
-      // console.log(userData);
+      console.log(userData);
       setUser(userData);
-      setUserId(userData.$id);
     };
-    // return () => {
-    userCallData();
-    // };
+    return () => {
+      userCallData();
+    };
   }, []);
 
   return (
-    <UserContext.Provider value={{ createUser, user, logout, login, userId }}>
+    <UserContext.Provider value={{ createUser, user, logout, login, getUser }}>
       {children}
     </UserContext.Provider>
   );

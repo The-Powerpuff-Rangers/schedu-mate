@@ -1,0 +1,23 @@
+
+
+.friendName {
+    margin: 1rem;
+    background-color: #E8AA42;
+    width: 9rem;
+    height: 3rem;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding-left: 0rem;
+    padding-top: 0.45rem;
+
+
+    .__text{
+        color: black;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2rem;
+        padding: 2px;
+    }
+}
