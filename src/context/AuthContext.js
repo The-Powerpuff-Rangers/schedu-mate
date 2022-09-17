@@ -11,6 +11,7 @@ export const AuthContextProvider = ({ children }) => {
   const createUser = async (email, password) => {
     await auth.create("unique()", email, password);
     const userSession = await createUserSession(email, password);
+    await userCallData();
     return userSession;
   };
 
@@ -19,8 +20,10 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   // Login function
-  const login = (email, password) => {
-    return auth.createEmailSession(email, password);
+  const login = async (email, password) => {
+    const session = await auth.createEmailSession(email, password);
+    await userCallData();
+    return session;
   };
 
   // Logout function
@@ -32,28 +35,15 @@ export const AuthContextProvider = ({ children }) => {
     return auth.get();
   };
 
-  // useEffect(() => {
-  //   const unsubscribe = async () => {
-  //     const userData = await auth.get();
-  //     console.log(userData);
-  //     setUser(userData);
-  //   };
-
-  //   return () => {
-  //     unsubscribe();
-  //   };
-  // });
+  const userCallData = async () => {
+    console.log("Hello");
+    const userData = await auth.get();
+    console.log(userData);
+    setUser(userData);
+  };
 
   useEffect(() => {
-    const userCallData = async () => {
-      console.log("Hello");
-      const userData = await auth.get();
-      console.log(userData);
-      setUser(userData);
-    };
-    return () => {
-      userCallData();
-    };
+    userCallData();
   }, []);
 
   return (

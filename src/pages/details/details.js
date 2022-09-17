@@ -37,7 +37,6 @@ const Details = () => {
       year: year,
       term: studyTerm,
       email: user.email,
-      id: user.uid,
     };
 
     console.log(userProfile);
@@ -45,10 +44,10 @@ const Details = () => {
     await db.createDocument(
       process.env.REACT_APP_APPWRITE_DATABASE_ID,
       process.env.REACT_APP_USERS_COLLECTION_ID,
-      "unique()",
+      user.$id,
       userProfile
     );
-    navigate("/home/my-schedule");
+    navigate("/home/schedule");
     console.log("successfully sent data");
   };
 
