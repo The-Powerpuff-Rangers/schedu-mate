@@ -1,13 +1,15 @@
 body {
-    background-color: #f8eacf;
+    
 }
 
 .searchbar {
     width: 50rem;
-    padding: 1rem;
-    border: none;
-    border-radius: 1rem;
+    padding: 1.2rem;
     font-size: 1.25rem;
+}
+.inside{
+    border: #333 solid;
+    border-radius: 1rem;
 }
 
 .searchbar input{

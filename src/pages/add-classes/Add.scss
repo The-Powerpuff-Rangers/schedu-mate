@@ -18,9 +18,14 @@
     border-radius: 2em;
     padding:2em;
     margin:0em;
+    height: 70%;
     box-shadow: 1em 1em 3em #c9c9c9;
     .add-class{
         width:80%;
+        
+    }
+    .field{
+        padding:0.5em;
     }
     label{
         font-size: large;
@@ -28,6 +33,10 @@
     }
     .control{
         width:100%;
+        height:3em;
+        color:#333;
+        margin-top:0.1em;
+        padding-top: 0.1em;
     }
     .is-grouped{
         justify-content:flex-start;
@@ -46,26 +55,30 @@
 .add-class{
     align-self: center;
 }
-header{
-    background-color: rgb(218, 240, 255);
-    padding:0.5em;
-}
-.background {
-    // background-color:#FFE5B4 ;
-}
-
-header {
-    // position: relative;
-    font-size: 30px;
-    font-weight: 600;
-    color: #333;
+.heading1{
+    background-color: #333;
+    padding:1em;
+    font-size: x-large;
+    font-weight: 500;
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin-bottom: -8rem;
     margin-top: 3rem;
 
+    color: white;
+   }
+
+
+
+
+.background {
+    background-color:whitesmoke ;
+    
 }
+
+
 
 
 
@@ -77,4 +90,24 @@ header {
     display: flex;
     flex-direction: column;
 
+}
+
+
+
+@media (max-width: 820px) {
+    .form-card {
+     
+        width:80%;
+        
+    }
+    
+}
+
+@media (max-width: 550px) {
+    .form-card {
+     
+        width:100%;
+        
+    }
+    
 }

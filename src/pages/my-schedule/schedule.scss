@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  // text-align: center;
 }
 
 .App-logo {
@@ -12,6 +12,20 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.heading2{
+  background-color: #333;
+  padding:1em;
+  font-size: x-large;
+  font-weight: 500;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 7rem;
+  margin-top: 3rem;
+
+  color: white;
+ }
 
 .App-header {
   background-color: #282c34;

@@ -1,0 +1,51 @@
+
+.upload_field{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+
+}
+.btn-grp{
+    margin-top:1em;
+    width:70em;
+    display: flex;
+    justify-content: flex-end;
+}
+.margin{
+    margin-left: 0.7em;
+    width:10em;
+    height:2.5em;
+    font-size: medium;
+    
+}
+.notes-main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.has-name{
+    justify-content: center;
+    
+}
+.file-cta{
+    justify-content: center;
+}
+.file-name{
+    width:20em;
+}
+.display-area{
+    margin-top: 1em;
+    display:flex;
+    height:23em;
+    background-color: white;
+    border: 1px #333 solid;
+    width:80%;
+    overflow: auto;
+    padding:2em;
+    justify-content: center;
+    
+}
+
+  
