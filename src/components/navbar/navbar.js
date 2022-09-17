@@ -6,7 +6,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 import { UserAuth } from "../../context/AuthContext";
 
-const NavBar = ({ active }) => {
+const NavBar = () => {
   const navigate = useNavigate();
 
   const { user, logout } = UserAuth();
@@ -89,9 +89,9 @@ const NavBar = ({ active }) => {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-light" onClick={handleLogout}>
-                  Sign out
-                </a>
+                <button className="button is-light" onClick={handleLogout}>
+                  Sign Out
+                </button>
               </div>
             </div>
           </div>

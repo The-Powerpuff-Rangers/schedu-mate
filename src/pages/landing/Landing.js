@@ -1,12 +1,20 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { UserAuth } from "../../context/AuthContext";
 import "./Landing.scss";
 
 import LandingImg from "../../assets/landing.svg";
 import icon from "../../components/navbar/icon.svg";
 
 const Landing = () => {
+  const { user } = UserAuth();
+  // const [yn, setYn] = useState(false);
+
+  // useEffect(() => {
+  //   if (user) setYn(true);
+  //   else setYn(false);
+  // }, [user]);
+
   return (
     <div>
       <div className="split left">
@@ -15,7 +23,11 @@ const Landing = () => {
           <p className="maintitle">ScheduLens</p>
         </div>
         <div className="centered">
-          <img className="avatar-woman" src={LandingImg} alt="Avatar woman"></img>
+          <img
+            className="avatar-woman"
+            src={LandingImg}
+            alt="Avatar woman"
+          ></img>
         </div>
       </div>
 
@@ -28,14 +40,22 @@ const Landing = () => {
             classes that you have in common with your friends. Friends make
             classes so much better!
           </p>
-          <p>
-            <Link className="landingButton" to="/signup">
-              Sign up
-            </Link>
-            <Link className="landingButton" to="/login">
-              Login
-            </Link>
-          </p>
+          {user.$id ? (
+            <p>
+              <Link className="landingButton" to="/home">
+                Get Started
+              </Link>
+            </p>
+          ) : (
+            <p>
+              <Link className="landingButton" to="/signup">
+                Sign up
+              </Link>
+              <Link className="landingButton" to="/login">
+                Login
+              </Link>
+            </p>
+          )}
         </div>
       </div>
     </div>

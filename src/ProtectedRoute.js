@@ -5,9 +5,9 @@ import { UserAuth } from "./context/AuthContext";
 const ProtectedRoute = ({ children }) => {
   const { user, getUser } = UserAuth();
 
-  const userData = getUser();
+  //   const userData = getUser();
 
-  console.log(userData);
+  //   console.log(user);
   //   console.log(user.email);
   if (!user) {
     return <Navigate to="/" />;

@@ -27,8 +27,10 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   // Logout function
-  const logout = () => {
-    return auth.deleteSession("current");
+  const logout = async () => {
+    const liggi = await auth.deleteSession("current");
+    setUser({});
+    return liggi;
   };
 
   const getUser = async () => {
@@ -36,9 +38,7 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const userCallData = async () => {
-    console.log("Hello");
     const userData = await auth.get();
-    console.log(userData);
     setUser(userData);
   };
 
