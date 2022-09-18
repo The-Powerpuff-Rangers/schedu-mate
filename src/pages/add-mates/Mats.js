@@ -107,20 +107,19 @@ const Mats = () => {
              
           </div>
           <div className="title">
-        <h3>Current Friends</h3></div>
+        <h3>Current Groups</h3></div>
         <div className="profiles">
             <Profile
               name={"Group Name 1"}
               school={"Maharaja Surajmal Institute of Technology"}
               email="m5afsh@msit.com"
-              program="Computer Science"
+             
             ></Profile>
             <Profile
               name={"Sophia's Group"}
               school={"Maharaja Surajmal Institute of Technology"}
               email="s62nguye@msit.com"
-              year="1st"
-              program="Software Engineering"
+             
             ></Profile>
              
           </div>
