@@ -35,7 +35,7 @@ const Home = () => {
             <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/result-of-upgradation-2022-23_OEz7enX.pdf'>Result of Upgradation 2022-23</a>
           </div>
           <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/nsp-portal-under-three-central-sector-scholarship-schemes-for-minority-community-st_VNtMBc9.pdf'>NSP portal under three Central Sector Scholarship Schemes for Minority Community Students for Academic Year 2022-23</a>
+            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/extension-of-last-date-of-fee-submission-ay-2022-23.pdf'>Extension of Last Date of Fee Submission A.Y. 2022-23</a>
           </div>
           <div className='home-element'>
             <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/nsp-portal-under-three-central-sector-scholarship-schemes-for-minority-community-st_u1VbVfT.pdf'> NSP portal under three Central Sector Scholarship Schemes for Minority Community Students for Academic Year 2022-23</a>
