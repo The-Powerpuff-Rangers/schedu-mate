@@ -8,6 +8,7 @@ import icon from "../../components/navbar/icon.svg";
 
 const Landing = () => {
   const { user } = UserAuth();
+
   return (
     <div className="landing-main">
       <div role="button" className="name" tabIndex={0}>
