@@ -23,14 +23,15 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="home-main">
       <NavBar></NavBar>
       <h1 className="heading2">Home</h1>
       <div className="landing-flex-home">
         <div className="left-home">left</div>
         <div className="right-home">right</div>
+        
       </div>
-      <button onClick={handleNewGroup} className="add-group">
+      <button onClick={handleNewGroup} className="landing-button margin">
         Add Group
       </button>
       {/* <p>

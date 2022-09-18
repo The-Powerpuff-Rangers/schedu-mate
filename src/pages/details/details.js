@@ -55,7 +55,7 @@ const Details = () => {
   return (
     <div className="body-container">
       <div className="container">
-        <header>Details Page</header>
+        <h1 className="heading1">Details Page</h1>
 
         {/* Form */}
         <form onSubmit={createProfile}>

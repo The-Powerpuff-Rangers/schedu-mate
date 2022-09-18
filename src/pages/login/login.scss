@@ -30,7 +30,26 @@ button.button.is-info.is-rounded {
     display:  grid;
     grid-template-columns: 1fr 1fr;
     background-color: #D2DAFF;
-    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+          -45deg, 
+          #ff7e7e 3%, 
+          #ddd8f5 25%, 
+          #f9bbff 55%, 
+          #bbffc4 100%
+    );  
+    animation: AnimateBG 16s ease infinite;
+  
+  @keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
     img{
         width:25em;
     }

@@ -22,10 +22,10 @@
     background-size: 300% 300%;
     background-image: linear-gradient(
           -45deg, 
-          #fdfdfe 3%, 
+          #ff7e7e 3%, 
           #ddd8f5 25%, 
-          #888ec6 55%, 
-          #6e72b2 100%
+          #f9bbff 55%, 
+          #bbffc4 100%
     );  
     animation: AnimateBG 16s ease infinite;
   
@@ -37,26 +37,37 @@
 }
   .landing-flex {
     display:flex;
+    width:100%;
     flex-direction: row;
-    justify-content: center;
+    
     align-items: center;
-    height: 100vh;
-  }
-  
-  .left {
-    width: 60%;
-    margin-left: 4em;
-    padding-top: 4em;
+    height: 80vh;
   }
   
   .right {
     width: 50%;
-    padding-right:2em;
+    height: max-content;
+    display: flex;
+    margin-right: -2em;
+    padding-top: 2em;
+    justify-content: center;
+  }
+  .avatar1{
+
+    width: 25em;
+    
+}
+
+  .left {
+    width: 50%;
+    margin-top: 1em;
+    padding-left:5em;
 
   }
   .button-group{
     
     display:flex;
+    
   }
 .landing-button{
   
@@ -91,9 +102,7 @@
   }
 
 
-    .avatar-woman{
-      width: 60%;
-    }
+   
      p {
        margin-top: 2rem;
        margin-bottom: 3rem;
@@ -126,7 +135,7 @@
     /* identical to box height */
 
     letter-spacing: 0.05em;
-    color: #1A3152;
+    color: #333;
 
     img {
       padding: 10px;
@@ -134,6 +143,7 @@
     }
 
   }
+
 
   ///////////////  RESPONSIVE CSS ///////////////////
 
@@ -159,9 +169,6 @@
     font-size: 15px;
 }
 
-.avatar-woman{
-    width: 80%;
-}
 
 p {
     margin-bottom: 2.5rem;
@@ -202,7 +209,10 @@ p {
     display:flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
+  }
+  .button-group{
+    justify-content: center;
   }
 .landing-button{
   
@@ -213,8 +223,11 @@ p {
 .maintitle{ 
     font-size: 30px;
   }
-.avatar-woman{
+.avatar1{
   width: 70%;
+  }
+  .left{
+    margin-left: 0em;
   }
 
 }
@@ -223,7 +236,7 @@ p {
 
   .left {
 
-    margin-left: 3em;
+    margin-left: 0em;
     //padding-top: 3em;
   }
   
@@ -231,6 +244,7 @@ p {
    
     padding-right:1.5em;
     margin-top:1.5em;
+    margin-right: 0;
 
   }
   
@@ -241,7 +255,7 @@ p {
     font-size: 12px;
 }
 
-.avatar-woman{
+.avatar1{
     width: 80%;
 }
 

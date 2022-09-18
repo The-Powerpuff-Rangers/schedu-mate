@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import "./Landing.scss";
 
-import LandingImg from "../../assets/landing.svg";
+import LandingImg from "../../assets/landing_pic.svg";
+
 import icon from "../../components/navbar/icon.svg";
 
 const Landing = () => {
@@ -15,15 +16,8 @@ const Landing = () => {
           <img className="__button" src={icon} alt="add"></img>
           <p className="maintitle">ScheduMate</p>
         </div>
-    
-    <div className="landing-flex">
-      <div className="left"> 
-        <div className="centered">
-          <img className="avatar-woman" src={LandingImg} alt="Avatar woman"></img>
-        </div>
-      </div>
-
-      <div className="right">
+        <div className="landing-flex">
+        <div className="left">
         <div className="centered">
           <strong><p className="welcome-message">Welcome to ScheduMate</p></strong>
           <h2 className="h2-font">Got classes common with friends? Sync now </h2>
@@ -33,7 +27,7 @@ const Landing = () => {
             classes so much better!
           </p>
           {user.$id ? (
-            <p>
+            <p className='button-group'>
               <Link className="landing-button st" to="/home">
                 Get Started
               </Link>
@@ -51,6 +45,14 @@ const Landing = () => {
           )}
         </div>
       </div>
+    
+      <div className="right"> 
+        
+          <img className="avatar1" src={LandingImg} alt="Avatar"></img>
+      
+      </div>
+
+      
     </div>
     </div>
   );
