@@ -34,7 +34,7 @@ Also getting all the information scattered in various groups and apps is a pain.
 
 ## What it does?
 
-ScheduMate is a platform to support students in maintaining _close relationships_ with their friends throughout university. It allows students to keep track of their classes in a personalized schedule, cultivate a friends list, and view their matching classes with their friends. The application allows you to enter your scheduled classes, add friends and see with who you share classes. It also provides all the important notifications and notices available on your university website. Our website does the heavy lifting so that students can have greater visibility into connecting with their peers. ScheduMate maintains a highly secure system where users can create, log in, and log out of their accounts, and the necessary information will always be readily available for them. With added features of accessing notes, and being up to date with latest news and notices of the university, ScheduMate is 
+ScheduMate is a platform to support students in maintaining _close relationships_ with their friends throughout university. It allows students to keep track of their classes in a personalized schedule, cultivate a friends list, and view their matching classes with their friends. The application allows you to enter your scheduled classes, add friends and see with who you share classes. It also provides all the important notifications and notices available on your university website. Our website does the heavy lifting so that students can have greater visibility into connecting with their peers. ScheduMate maintains a highly secure system where users can create, log in, and log out of their accounts, and the necessary information will always be readily available for them. With added features of accessing notes, and being up to date with latest news and notices of the university, ScheduMate is
 the one stop solution for all your university needs.
 
 ## How we built it?
@@ -56,9 +56,9 @@ Even though our team had knowledge of various techstacks, we still had quite a h
 
 [Biswa](https://github.com/2002Bishwajeet) - For him, it was his first time integrating appwrite on a react project, hosting Appwrite on Digital Ocean, settings up domain and SSL, use subdomain for appwrite and main domain for frontend. Also, he had to learn how to use Appwrite's SDK and API for the JS application. For him, setting a production server was a new experience.
 
-[Harsh](https://github.com/harshsH-28) - For him, it was his first time using Appwrite and React. He had to learn how to use Appwrite's SDK and API for the JS application. He collaborated with Biswa to integrate and fix the crucial bugs for the Appwrite SDK.
+[Harsh](https://github.com/harshsH-28) - For him, it was his first time integrating Appwrite with React. Working with Appwrite SDK and state management was a major challenge for him. He collaborated with Biswa to integrate and fix the crucial bugs for the Appwrite SDK and also deployed Frontend along with Biswa.
 
-[Gunjan](https://github.com/GunjanGupta26) - For her, it was her first time particpating in a hackathon and she quite thrilled and anxious at the same time. She learning web development and she played a major role in writing the css for the website. She was quite stuck for a long time, designing the UI for the website and achieving the desired look.
+[Gunjan](https://github.com/GunjanGupta26) - For her, it was her first time particpating in a hackathon and she was quite thrilled and did a great job. She played role in building the frontend. She was the lead in designing and beautifying the website using css. She took time designing the UI for the website but achieved the desired look.
 
 [Vidhu](https://github.com/Kranium2002) - He was a lead in designing the UI for the website. He also helped in writing cloud functions for appwrite and helped Biswa in deploying cloud functions successfully. Deploying and writing web scraper python code and population the database was a major challenge for him.
 
@@ -86,8 +86,8 @@ npm install && npm start
 
 Tu run it locally - go over to [https://localhost:3000](https://localhost:3000)
 
-To setup appwrite, there are somne cloud functions well written for you by us😉. You can find them in the cloud functions. To run those cloud functions, follow the instructions [here](https://appwrite.io/docs/functions).
-It's recommend to install appwrite CLI to deploy those cloud functions easily. More about it [here](https://appwrite.io/docs/command-line)
+To setup appwrite, there are some cloud functions well written for you by us😉. You can find them in the cloud functions. To run those cloud functions, follow the instructions [here](https://appwrite.io/docs/functions).
+It's recommended to install appwrite CLI to deploy those cloud functions easily. More about it [here](https://appwrite.io/docs/command-line)
 
 > Also edit the `.env` file and update the variables. This should be pretty self-explanatory although we would be happy to help you out if you face any issues. If there is feel free to create an issue.
 
@@ -109,13 +109,13 @@ Everyone learned something.
 
 - **Harsh** learned Appwrite, more advanced fundamentals of React, and how to use Appwrite's SDK and API for the JS application.
 
-- **Gunjan** learned more about web development and how to use Bulma and Tailwind CSS. She also learned about appwrite
+- **Gunjan** learned more about React and tools like Bulma and Tailwind CSS. She also learned about appwrite.
 
 - **Vidhu** learned how to write cloud functions for Appwrite, how to deploy cloud functions, how to write a web scraper in Python, and how to populate the database. He also learned about appwrite and integrating it with React.
 
 ## Future Scopes
 
-Although this project is ready, there is always scope for more improvemtn
+Although this project is ready, there is always scope for more improvement
 
 - We will use NLP to find relevant information for any subject on the internet and display it accordingly.
 
