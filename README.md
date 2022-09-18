@@ -126,6 +126,20 @@ Although this project is ready, there is always scope for more improvement
 - Improving the UI and UX of the website.
 
 ## 📸 Screenshots Time
+![image](https://user-images.githubusercontent.com/62933155/190900684-ae2c758b-b11a-41b5-9115-f4d2f97845b0.png)
+![image](https://user-images.githubusercontent.com/62933155/190900696-c55ab8a1-e2e5-464d-91e9-3d9fde925da7.png)
+![image](https://user-images.githubusercontent.com/62933155/190900707-98063c0d-298f-4627-b430-d94b8a265293.png)
+![image](https://user-images.githubusercontent.com/62933155/190900721-74c6e97c-7b9b-49dc-a833-88e2305d0aea.png)
+![image](https://user-images.githubusercontent.com/62933155/190900730-ce32ab32-8c2b-4203-91dd-c23706b7b7a8.png)
+![image](https://user-images.githubusercontent.com/62933155/190900733-e237bfa6-ef4a-4125-8284-025a715e29d4.png)
+![image](https://user-images.githubusercontent.com/62933155/190900740-61b1e1bc-83c7-4e06-8e1a-8b7d9e9ab224.png)
+![image](https://user-images.githubusercontent.com/62933155/190900752-46d8d49f-5130-4220-9699-f3e7c73ea8d1.png)
+![image](https://user-images.githubusercontent.com/62933155/190900759-aa1d5c8e-ada3-4b51-b375-6ae6a12d5dcc.png)
+![image](https://user-images.githubusercontent.com/62933155/190900768-805918dd-7079-40ca-868a-bd2f3187184d.png)
+
+## Contributing
+
+Since this project was built during Hack the Mountains 3.0, we would be seldomly improving this product. However we encourage you to contribute this repo and take it more as a tutorial of how this project was built. If you have any suggesstions or want to make some changes, feel free to create a PR or an issue.
 
 ## License
 
