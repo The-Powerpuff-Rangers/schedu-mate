@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.scss";
 
 import icon from "./icon.svg";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate,Link } from "react-router-dom";
 
 import { UserAuth } from "../../context/AuthContext";
 
@@ -26,7 +26,7 @@ const NavBar = () => {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <br></br>
-          <strong>ScheduMate</strong>
+          <Link to="/home"><strong>ScheduMate</strong></Link>
 
           <a
             role="button"
