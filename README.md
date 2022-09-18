@@ -28,13 +28,14 @@ ScheduMate is a web application that allows you to easily see the classes that y
 
 ## Inspiration
 
-Do you ever reach out to your friends to compare class schedules but forget who you have classes with when they roll around? Or have you wanted to know if any friends are in a specific class but it’s way too time consuming to ask everyone? Some university classes have over 200 students, and with so many different profs, class times and classes, it’s a hassle to compare schedules and connect with your friends before classes start.
+Do you ever reach out to your friends to compare class schedules but forget who you have classes common with when they roll around? Or have you wanted to know if any friends are in a specific class but it’s way too time consuming to ask everyone? Some university classes have over 200 students, and with so many different profs, class times and classes, it’s a hassle to compare schedules and connect with your friends before classes start.
 
 Also getting all the information scattered in various groups and apps is a pain. Reaching different domains to get different data is quite a hassle.
 
 ## What it does?
 
-ScheduMate is a platform to support students in maintaining _close relationships_ with their friends throughout university. It allows students to keep track of their classes in a personalized schedule, cultivate a friends list, and view their matching classes with their friends. The application allows you to enter your scheduled classes, add friends and see with who you share classes. It also provides all the important notifications and notices available on your university website. Our website does the heavy lifting so that students can have greater visibility into connecting with their peers. ScheduLens maintains a highly secure system where users can create, log in, and log out of their accounts, and the necessary information will always be readily available for them.
+ScheduMate is a platform to support students in maintaining _close relationships_ with their friends throughout university. It allows students to keep track of their classes in a personalized schedule, cultivate a friends list, and view their matching classes with their friends. The application allows you to enter your scheduled classes, add friends and see with who you share classes. It also provides all the important notifications and notices available on your university website. Our website does the heavy lifting so that students can have greater visibility into connecting with their peers. ScheduMate maintains a highly secure system where users can create, log in, and log out of their accounts, and the necessary information will always be readily available for them. With added features of accessing notes, and being up to date with latest news and notices of the university, ScheduMate is 
+the one stop solution for all your university needs.
 
 ## How we built it?
 
@@ -47,11 +48,11 @@ This Project is proudly built with [Appwrite](https://appwrite.io/) and Hosted o
 
 Our Frontend is designed with [React](https://reactjs.org/) and [Bulma](https://bulma.io/) and [Tailwind](https://tailwindcss.com/) Framework. We also used Sass(https://sass-lang.com/) for styling.
 
-Cloud Functions has been written in various Languages and the and some of the code taken from our senior's project and tweaked a bit(getting the required permissions).All Rights goes to them. To know more about it go the `cloud-functions`.
+Cloud Functions has been written in various Languages and some of the code taken from our senior's project and tweaked a bit(getting the required permissions).All Rights goes to them. To know more about it go the `cloud-functions`.
 
 ## Challenges we ran into?
 
-Even though are team had a knowledge of various techstacks, we still had quite a hurdles.
+Even though our team had knowledge of various techstacks, we still had quite a hurdles.
 
 [Biswa](https://github.com/2002Bishwajeet) - For him, it was his first time integrating appwrite on a react project, hosting Appwrite on Digital Ocean, settings up domain and SSL, use subdomain for appwrite and main domain for frontend. Also, he had to learn how to use Appwrite's SDK and API for the JS application. For him, setting a production server was a new experience.
 
