@@ -27,7 +27,7 @@ export const Login = () => {
     return (
 
       <div className='body-container'>
-      <section className='side'>
+      <section className='side-l'>
         <img className='side-img' src={SignupSide} alt="login" />
       </section>
       <section className='main'>

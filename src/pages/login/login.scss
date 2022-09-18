@@ -124,7 +124,7 @@ button.button.is-info.is-rounded {
                     align-items: center;
                     padding: 1rem 1rem;
                     font-family: 'Poppins';
-                    background-color: rgba(255, 0, 0, 0.2);;
+                    background-color: rgba(255, 0, 0, 0.2);
                     margin: .5rem .5rem;
 
                 }
@@ -182,7 +182,7 @@ button.button.is-info.is-rounded {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .side {
+        .side-l {
             padding-bottom: 0px;
             width: 60%;
             margin-bottom: -60px;
@@ -204,7 +204,7 @@ button.button.is-info.is-rounded {
         // flex-direction: row;
         justify-content: center;
         align-items: center;
-        .side {
+        .side-l {
             // display: none;
             img {
                 width: 375px;
@@ -222,15 +222,25 @@ button.button.is-info.is-rounded {
         // flex-direction: row;
         justify-content: center;
         align-items: center;
-        .side {
+        .side-l {
             width: 70%;
             img {
                 width: 350px;
                 height: 450px;
             }
         }
+        section .signup-container .signup-form .signup-text {
+            font-size: 18px;
+        }
     }
-    
+    button.button.is-info.is-rounded {
+        padding-top: .8em;
+        padding-bottom: .8em;
+        // width: auto;
+        align-self: center;
+        margin-bottom: 1em;
+        font-size: large;
+    }
 }
 
 @media (max-width: 590px) {
@@ -238,7 +248,7 @@ button.button.is-info.is-rounded {
         display: flex;
         justify-content: center;
         align-items: center;
-        .side {
+        .side-l {
             display: flex;
             margin-bottom: -70px;
             width: 70%;
@@ -261,7 +271,7 @@ button.button.is-info.is-rounded {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .side {
+        .side-l {
             margin-top: -10rem;
             margin-bottom: -17rem;
             width: 70%;
@@ -269,6 +279,9 @@ button.button.is-info.is-rounded {
             .login-text {
                 word-break: break-all;
             }
+        }
+        section .signup-container .signup-form .signup-text {
+            font-size: 14px;
         }
     }
     
