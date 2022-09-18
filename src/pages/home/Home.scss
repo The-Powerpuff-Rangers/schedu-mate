@@ -18,6 +18,7 @@
     
     height: 100vh;
     width: 100%;
+    
   }
   
   .left-home {
@@ -67,6 +68,17 @@
         
           }
 }
+  }
+
+  .home-main{
+    position: relative;
+    
+    .margin{
+      position: absolute;
+      top: 39em;
+      left: 85%; 
+    }
+    
   }
   @media (max-width: 300px) {
     .landing-flex-home {

@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.scss";
 
 import icon from "./icon.svg";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import { UserAuth } from "../../context/AuthContext";
 
@@ -23,86 +23,73 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className="navbar" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
-          <br></br>
-          <Link to="/home">
-            <strong>ScheduMate</strong>
-          </Link>
+    <nav className="navbar" role="navigation" aria-label="main navigation">
+  <div className="navbar-brand">
+   <br></br>
+      <strong>ScheduMate</strong>
+     
 
-          <a
-            role="button"
-            onClick={function () {
-              var $burgers = document.querySelectorAll(".navbar-burger");
+    <a role="button" onClick ={function() {
+    
+    var $burgers = document.querySelectorAll(".navbar-burger");
 
-              if ($burgers.length > 0) {
-                $burgers.forEach(function ($el) {
-                  if (!$el.dataset.target) {
-                    return;
-                  }
+    if ($burgers.length > 0) {
+      $burgers.forEach(function ($el) {
+        if (!$el.dataset.target) {
+          return;
+        }
+  
+        
+          var target = $el.dataset.target;
+          var $target = document.getElementById(target);
+          $el.classList.toggle("is-active");
+          $target.classList.toggle("is-active");
+        
+      });
+    }
+    
+  }} className="navbar-burger is-active" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
 
-                  var target = $el.dataset.target;
-                  var $target = document.getElementById(target);
-                  $el.classList.toggle("is-active");
-                  $target.classList.toggle("is-active");
-                });
-              }
-            }}
-            className="navbar-burger is-active"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
+  <div id="navbarBasicExample" className="navbar-menu">
+    <div className="navbar-end">
+      <a className="navbar-item" onClick={() => navigate("/home/profile")}>
+      My Profile
+      </a>
 
-        <div id="navbarBasicExample" className="navbar-menu">
-          <div className="navbar-end">
-            <a
-              className="navbar-item"
-              onClick={() => navigate("/home/profile")}
-            >
-              My Profile
-            </a>
-
-            <a
-              className="navbar-item"
-              onClick={() => navigate("/home/addclasses")}
-            >
-              Add Classes
-            </a>
-            <a
-              className="navbar-item"
-              onClick={() => navigate("/home/schedule")}
-            >
-              My Schedule
-            </a>
-            <a
-              className="navbar-item"
-              onClick={() => navigate("/home/addmates")}
-            >
-              Add Friends
-            </a>
-            <a className="navbar-item" onClick={() => navigate("/home/notes")}>
-              Notes
-            </a>
-          </div>
-
+      <a className="navbar-item"  onClick={() => navigate("/home/addclasses")}>
+      Add Classes
+      </a>
+      <a className="navbar-item" onClick={() => navigate("/home/schedule")}>
+      My Schedule
+      </a>      
+      <a className="navbar-item" onClick={() => navigate("/home/addmates")}>
+      Add Friends
+      </a> 
+      <a className="navbar-item" onClick={() => navigate("/home/notes")}>
+      Notes
+      </a>
+    </div>
+    
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <button className="button is-light" onClick={handleLogout}>
+                <button className="button is-transparent" onClick={handleLogout}>
                   Sign Out
                 </button>
-              </div>
-            </div>
-          </div>
+            
         </div>
-      </nav>
+        
+      </div>
     </div>
+    
+  </div>
+</nav>
+</div>
   );
 };
 
