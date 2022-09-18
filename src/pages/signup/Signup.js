@@ -29,7 +29,7 @@ const Signup = () => {
   return (
     <div className='body-container'>
       <section className='side'>
-        <img src={loginSide} alt="login" />
+        <img className='side-img-s' src={loginSide} alt="login" />
       </section>
       <section className='main'>
         <div className='signup-container'>

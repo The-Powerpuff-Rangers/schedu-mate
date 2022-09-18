@@ -12,7 +12,7 @@
     width: 100%;
     display:  grid;
     grid-template-columns: 1fr 1fr ;
-    background-color: #eeebdf;
+    background-color: #D2DAFF;
 
     // target section
     section {
@@ -160,20 +160,11 @@
         .side {
             display: flex;
         }
+        
     }
     
 }
-@media (max-width: 890px) {
-    .body-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .side {
-            display: flex;
-        }
-    }
-    
-}
+
 @media (max-width: 1320px) {
     .body-container {
         display: flex;
@@ -182,24 +173,8 @@
         .side {
             // display: none;
             img {
-                width: 675px;
-                height: 700px;
-            }
-        }
-    }
-    
-}
-
-@media (max-width: 1240px) {
-    .body-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .side {
-            // display: none;
-            img {
-                width: 575px;
-                height: 600px;
+                width: 400px;
+                height: 400px;
             }
         }
     }
@@ -221,17 +196,42 @@
     
 }
 
-@media (max-width: 390px) {
+
+@media (max-width: 805px) {
+    .body-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .side {
+            padding-bottom: 0px;
+            width: 60%;
+            margin-bottom: -60px;
+            img {
+                width: 350px;
+                height: 450px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
     .body-container {
         display: flex;
         justify-content: center;
         align-items: center;
         .side {
-            display: none;
+            // display: none;
             
+            .side-img-s{
+                margin-bottom: -15rem;
+            }
             .login-text {
                 word-break: break-all;
             }
+        }
+        section .signup-container .title{
+            font-size: 3rem;
         }
     }
     
