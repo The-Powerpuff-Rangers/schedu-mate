@@ -1,5 +1,5 @@
 import { React, useState, useEffect, useContext } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import {
   AuthContextProvider,
   UserAuth,
@@ -17,17 +17,6 @@ import Profile from "./pages/profile/Profile";
 import Mats from "./pages/add-mates/Mats.js";
 
 function App() {
-  // const { user, getUser } = useContext(UserContext);
-  // const user = getUser();
-  // const [user, setUser] = useState({});
-  // useEffect(() => {
-  // const UserData = async () => {
-  //   const userInfo = await getUser();
-  //   setUser(userInfo);
-  // };
-  // UserData();
-  // }, []);
-  // console.log(user);
   return (
     <AuthContextProvider>
       <Routes>
@@ -43,11 +32,51 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/home/addclasses" exact element={<AddClasses />} />
-        <Route path="/home/schedule" exact element={<Schedule />} />
-        <Route path="/home/profile" exact element={<Profile />} />
-        <Route path="/home/addmates" exact element={<Mats />} />
-        <Route path="/details" exact element={<Details />} />
+        <Route
+          path="/home/addclasses"
+          exact
+          element={
+            <ProtectedRoute>
+              <AddClasses />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/home/schedule"
+          exact
+          element={
+            <ProtectedRoute>
+              <Schedule />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/home/profile"
+          exact
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/home/addmates"
+          exact
+          element={
+            <ProtectedRoute>
+              <Mats />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/details"
+          exact
+          element={
+            <ProtectedRoute>
+              <Details />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </AuthContextProvider>
   );

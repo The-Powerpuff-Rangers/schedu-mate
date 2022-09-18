@@ -8,12 +8,6 @@ import icon from "../../components/navbar/icon.svg";
 
 const Landing = () => {
   const { user } = UserAuth();
-  // const [yn, setYn] = useState(false);
-
-  // useEffect(() => {
-  //   if (user) setYn(true);
-  //   else setYn(false);
-  // }, [user]);
 
   return (
     <div>
