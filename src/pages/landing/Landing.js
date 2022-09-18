@@ -20,11 +20,11 @@ const Landing = () => {
         <div className="left">
         <div className="centered">
           <strong><p className="welcome-message">Welcome to ScheduMate</p></strong>
-          <h2 className="h2-font">Got classes common with friends? Sync now </h2>
+          <h2 className="h2-font">Got classes common with friends? Sync them now.</h2>
           <p className='paragraph'>
-            ScheduMate is an application that allows you to easily see the
-            classes that you have in common with your friends. Friends make
-            classes so much better!
+            ScheduMate is an application that allows you to easily see and sync the
+            classes that you have in common with your friends, access notes , get the latest updates by your University. Friends make
+            classes so much better! Get started and Explore more!!
           </p>
           {user.$id ? (
             <p className='button-group'>
