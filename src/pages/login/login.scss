@@ -229,6 +229,9 @@ button.button.is-info.is-rounded {
                 height: 450px;
             }
         }
+        section .signup-container .signup-form .signup-text {
+            font-size: 18px;
+        }
     }
     button.button.is-info.is-rounded {
         padding-top: .8em;
@@ -237,23 +240,6 @@ button.button.is-info.is-rounded {
         align-self: center;
         margin-bottom: 1em;
         font-size: large;
-    }
-    .body-container section .signup-container .signup-form .signup-text {
-        
-        font-weight: thin;
-        font-size: 20px;
-    }
-    .sign-text {
-        letter-spacing: 3px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 20px;
-        text-transform: uppercase;
-        &:hover {
-            color:#277bc0;
-        }
     }
 }
 
@@ -293,6 +279,9 @@ button.button.is-info.is-rounded {
             .login-text {
                 word-break: break-all;
             }
+        }
+        section .signup-container .signup-form .signup-text {
+            font-size: 14px;
         }
     }
     
