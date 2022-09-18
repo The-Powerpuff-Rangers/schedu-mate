@@ -137,6 +137,9 @@ Although this project is ready, there is always scope for more improvement
 ![image](https://user-images.githubusercontent.com/62933155/190900759-aa1d5c8e-ada3-4b51-b375-6ae6a12d5dcc.png)
 ![image](https://user-images.githubusercontent.com/62933155/190900768-805918dd-7079-40ca-868a-bd2f3187184d.png)
 
+## Contributing
+
+Since this project was built during Hack the Mountains 3.0, we would be seldomly improving this product. However we encourage you to contribute this repo and take it more as a tutorial of how this project was built. If you have any suggesstions or want to make some changes, feel free to create a PR or an issue.
 
 ## License
 
