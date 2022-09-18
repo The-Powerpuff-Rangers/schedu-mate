@@ -1,0 +1,95 @@
+
+
+.form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root {
+  max-height: fit-content;
+}
+.form-card {
+  justify-content: center;
+  display: flex;
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2em;
+  padding: 2em;
+  margin: 0em;
+  height: 70%;
+  box-shadow: 1em 1em 3em #c9c9c9;
+  .add-class {
+    width: 80%;
+  }
+  .field {
+    padding: 0.3em;
+  }
+  label {
+    font-size: large;
+    font-weight: 300;
+  }
+  .control {
+    width: 100%;
+    height: 2em;
+    color: #333;
+    margin-top: 0.1em;
+    padding-top: 0.1em;
+  }
+  .is-grouped {
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 6em;
+  }
+  .control {
+    button {
+      width: 5em;
+      font-size: small;
+    }
+  }
+}
+
+.add-class {
+  align-self: center;
+}
+.heading1 {
+  background-color: #333;
+  padding: 1em;
+
+  font-size: x-large;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: -8rem;
+  margin-top: 0rem;
+
+  color: white;
+}
+
+.background {
+  background-color: whitesmoke;
+}
+
+.body-ctn {
+  // background-color: #FFE5B4;
+  // flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 820px) {
+  .form-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .form-card {
+    width: 100%;
+  }
+}

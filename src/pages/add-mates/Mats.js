@@ -30,7 +30,7 @@ const Mats = () => {
   return (
     <div>
       <NavBar active={"friends"}></NavBar>
-      <h1 className='heading2'>Add Friends</h1>
+      <h1 className="heading2">Add Friends</h1>
 
       <div className="searchbar">
         <input
@@ -65,68 +65,67 @@ const Mats = () => {
             );
           })}
       <Profile
-        name={"Maryam"}
-        school={"University of Waterloo"}
-        email="m5afsh@uwaterloo.ca"
-        year="2nd"
+        name={"Harsh Sharma"}
+        school={"Maharaja Surajmal Institute of Technology"}
+        email="harshs@gmail.com"
+        year="3nd"
         program="Computer Science"
         add="true"
       ></Profile>
       <div className="title">
-        <h3>Current Friends</h3></div>
-        {friends.length > 1 ? (
-          friends.map((item) => {
-            return (
-              <Profile
-                name={item.name}
-                school={item.university}
-                email={item.name}
-                year={item.year}
-                program={item.program}
-                add="true"
-              ></Profile>
-            );
-          })
-        ) : (
-          <div className="mates-main">
+        <h3>Current Friends</h3>
+      </div>
+      {friends.length > 1 ? (
+        friends.map((item) => {
+          return (
+            <Profile
+              name={item.name}
+              school={item.university}
+              email={item.name}
+              year={item.year}
+              program={item.program}
+              add="true"
+            ></Profile>
+          );
+        })
+      ) : (
+        <div className="mates-main">
           <div className="profiles">
             <Profile
-              name={"Maryam"}
-              school={"University of Waterloo"}
-              email="m5afsh@uwaterloo.ca"
-              year="2nd"
+              name={"Gunjan"}
+              school={"Maharaja Surajmal Institute of Technology"}
+              email="gujju@gmail.com"
+              year="3nd"
               program="Computer Science"
+              add="true"
             ></Profile>
             <Profile
-              name={"Sophia"}
-              school={"University of Waterloo"}
-              email="s62nguye@uwaterloo.ca"
-              year="1st"
-              program="Software Engineering"
+              name={"Vidhu Mathur"}
+              school={"Maharaja Surajmal Institute of Technology"}
+              email="vid@gmail.com"
+              year="3nd"
+              program="Computer Science and Engineering"
+              add="true"
             ></Profile>
-             
           </div>
           <div className="title">
-        <h3>Current Groups</h3></div>
-        <div className="profiles">
+            <h3>Current Groups</h3>
+          </div>
+          <div className="profiles">
             <Profile
-              name={"Group Name 1"}
+              name={"GDSC Core"}
               school={"Maharaja Surajmal Institute of Technology"}
               email="m5afsh@msit.com"
-             
             ></Profile>
             <Profile
               name={"Sophia's Group"}
               school={"Maharaja Surajmal Institute of Technology"}
               email="s62nguye@msit.com"
-             
             ></Profile>
-             
           </div>
-          </div>
-        )}
-      </div>
-    
+        </div>
+      )}
+    </div>
   );
 };
 
