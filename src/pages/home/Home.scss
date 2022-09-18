@@ -21,6 +21,23 @@
     
   }
   
+  .home-element{
+    font-size: medium;
+    background-color: whitesmoke;
+    width:100%;
+    padding:0.5em;
+    border-radius:1em;
+    margin: 0.5em;
+  }
+  
+  .home-heading{
+    width:100%;
+    background-color: aquamarine;
+    font-weight: 600;
+    font-size: larger;
+    padding:1em;
+    border-radius: 1em;
+  }
   .left-home {
     border: 1px solid #333;
     padding: 2em;
@@ -28,10 +45,14 @@
     margin:0.5em;
     box-shadow: 3px 3px 10px rgb(201, 201, 201);
     border-radius: 1em;
-    height: 50vh
+    height: 50vh;
+    overflow-y: auto;
+    overflow-x:hidden;
   }
   
   .right-home {
+    overflow-x:hidden;
+    overflow-y: auto;
     height: 50vh;
     border: 1px solid #333;
     padding: 2em;
