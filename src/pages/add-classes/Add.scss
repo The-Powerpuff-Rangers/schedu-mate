@@ -25,7 +25,7 @@
         
     }
     .field{
-        padding:0.5em;
+        padding:0.3em;
     }
     label{
         font-size: large;
@@ -33,7 +33,7 @@
     }
     .control{
         width:100%;
-        height:3em;
+        height:2em;
         color:#333;
         margin-top:0.1em;
         padding-top: 0.1em;
@@ -58,6 +58,7 @@
 .heading1{
     background-color: #333;
     padding:1em;
+
     font-size: x-large;
     font-weight: 500;
     
@@ -65,7 +66,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: -8rem;
-    margin-top: 3rem;
+    margin-top: 0rem;
 
     color: white;
    }
