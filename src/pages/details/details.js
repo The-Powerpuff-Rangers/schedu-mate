@@ -135,7 +135,16 @@ const Details = () => {
               <div className="fields">
                 {/* University */}
                 <div className="input-field">
-                  <label>University or School</label>
+                <label>University/School</label>
+                  <input
+                    onChange={(e) => setUniversity(e.target.value)}
+                    type="text"
+                    placeholder="Enter your university"
+                    required
+                  ></input>
+                </div>
+                <div className="input-field">
+                  <label>College</label>
                   <input
                     onChange={(e) => setUniversity(e.target.value)}
                     type="text"
@@ -145,7 +154,7 @@ const Details = () => {
                 </div>
                 {/* Program */}
                 <div className="input-field">
-                  <label>Program</label>
+                  <label>Course</label>
                   <input
                     onChange={(e) => setProgram(e.target.value)}
                     type="text"
@@ -168,23 +177,22 @@ const Details = () => {
                 </div>
                 {/* term */}
                 <div className="input-field">
-                  <label>Current Study Term:</label>
+                  <label>Current Semester:</label>
                   <select
                     onChange={(e) => setStudyTerm(e.target.value)}
                     required
                   >
                     <option disabled selected>
-                      Select Term
+                      Select Sem
                     </option>
-                    <option>1A</option>
-                    <option>1B</option>
-                    <option>2A</option>
-                    <option>2B</option>
-                    <option>3A</option>
-                    <option>3B</option>
-                    <option>4A</option>
-                    <option>4B</option>
-                    <option>5+</option>
+                    <option>First</option>
+                    <option>Second</option>
+                    <option>Third</option>
+                    <option>Fourth</option>
+                    <option>Fifth</option>
+                    <option>Sixth</option>
+                    <option>Seventh</option>
+                    <option>Eight</option>
                   </select>
                 </div>
               </div>

@@ -10,7 +10,28 @@
 //   }
 
 .landing-main{
-  background-color: #D2DAFF;
+  // background-color: #D2DAFF;
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+          -45deg, 
+          #fdfdfe 3%, 
+          #ddd8f5 25%, 
+          #888ec6 55%, 
+          #6e72b2 100%
+    );  
+    animation: AnimateBG 16s ease infinite;
+  
+  @keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
 }
   .landing-flex {
     display:flex;
@@ -25,9 +46,7 @@
     margin-left: 4em;
     padding-top: 4em;
   }
-  .paragraph{
-    margin-bottom: 2em;
-  }
+  
   .right {
     width: 50%;
     padding-right:2em;
@@ -37,12 +56,9 @@
     
     display:flex;
   }
-  .st{
-    margin-top: 2em;
-  }
 .landing-button{
   
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-right: 2rem;
     width: 12rem;
     align-items: center;
