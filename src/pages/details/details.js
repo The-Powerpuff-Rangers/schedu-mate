@@ -15,6 +15,7 @@ const Details = () => {
   const [program, setProgram] = useState("");
   const [year, setYear] = useState("");
   const [studyTerm, setStudyTerm] = useState("");
+  const [college, setCollege] = useState("");
 
   // Navigation
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ const Details = () => {
       year: year,
       term: studyTerm,
       email: user.email,
+      college: college,
     };
 
     console.log(userProfile);
@@ -146,7 +148,7 @@ const Details = () => {
                 <div className="input-field">
                   <label>College</label>
                   <input
-                    onChange={(e) => setUniversity(e.target.value)}
+                    onChange={(e) => setCollege(e.target.value)}
                     type="text"
                     placeholder="Enter your university"
                     required

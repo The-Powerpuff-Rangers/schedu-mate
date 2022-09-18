@@ -72,14 +72,14 @@ export default function Schedule() {
           title: data.classname,
           start: new Date(
             2022,
-            9,
+            8,
             17,
             data.starttime.substring(0, 2),
             data.starttime.slice(3)
           ),
           end: new Date(
             2022,
-            9,
+            8,
             18,
             data.endtime.substring(0, 2),
             data.endtime.slice(3)
