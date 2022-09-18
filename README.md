@@ -121,6 +121,8 @@ Although this project is ready, there is always scope for more improvement
 
 - We will add a feature to add a class to the schedule by just scanning the QR code of the class.
 
+- Encrypting data using AES-CBC 256 bit encryption.
+
 - Improving the UI and UX of the website.
 
 ## 📸 Screenshots Time
