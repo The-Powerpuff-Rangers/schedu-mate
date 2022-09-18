@@ -73,7 +73,7 @@ const Mats = () => {
         add="true"
       ></Profile>
       <div className="title">
-        <h3>Current Friends</h3>
+        <h3>Current Friends</h3></div>
         {friends.length > 1 ? (
           friends.map((item) => {
             return (
@@ -88,6 +88,7 @@ const Mats = () => {
             );
           })
         ) : (
+          <div className="mates-main">
           <div className="profiles">
             <Profile
               name={"Maryam"}
@@ -103,10 +104,30 @@ const Mats = () => {
               year="1st"
               program="Software Engineering"
             ></Profile>
+             
+          </div>
+          <div className="title">
+        <h3>Current Friends</h3></div>
+        <div className="profiles">
+            <Profile
+              name={"Group Name 1"}
+              school={"Maharaja Surajmal Institute of Technology"}
+              email="m5afsh@msit.com"
+              program="Computer Science"
+            ></Profile>
+            <Profile
+              name={"Sophia's Group"}
+              school={"Maharaja Surajmal Institute of Technology"}
+              email="s62nguye@msit.com"
+              year="1st"
+              program="Software Engineering"
+            ></Profile>
+             
+          </div>
           </div>
         )}
       </div>
-    </div>
+    
   );
 };
 

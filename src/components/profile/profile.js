@@ -15,9 +15,9 @@ const Profile = ({ name, school, email, year, program, add }) => {
         
     return (
         <div className='profile'>
-            {add && <button onClick={handleClick} className="__button">
-            {added ? <img className='__button' src={addedButton} alt="add"></img> : 
-                        <img className='__button' src={button} alt="add"></img>
+            {add && <button onClick={handleClick} className="_button">
+            {added ? <img className='_button' src={addedButton} alt="add"></img> : 
+                        <img className='_button' src={button} alt="add"></img>
             }
 
                </button> }

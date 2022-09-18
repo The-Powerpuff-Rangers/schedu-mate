@@ -11,7 +11,10 @@ body {
     border: #333 solid;
     border-radius: 1rem;
 }
-
+.mates-main{
+    display: flex;
+    flex-direction: column;
+}
 .searchbar input{
     background-color: white !important;
     background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
