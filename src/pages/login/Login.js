@@ -26,7 +26,7 @@ export const Login = () => {
 
     return (
 
-    <div className='body-container'>
+      <div className='body-container'>
       <section className='side'>
         <img className='side-img' src={SignupSide} alt="login" />
       </section>
@@ -70,7 +70,6 @@ export const Login = () => {
         </div>
       </section>
     </div>
-        
     )
 }
 

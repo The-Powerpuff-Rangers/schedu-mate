@@ -8,56 +8,48 @@ import icon from "../../components/navbar/icon.svg";
 
 const Landing = () => {
   const { user } = UserAuth();
-  // const [yn, setYn] = useState(false);
-
-  // useEffect(() => {
-  //   if (user) setYn(true);
-  //   else setYn(false);
-  // }, [user]);
-
   return (
-    <div>
-      <div className="split left">
-        <div role="button" className="name" tabIndex={0}>
-          {/* <img className="__button" src={icon} alt="add"></img> */}
-          <p className="maintitle">ScheduLens</p>
+    <div className="landing-main">
+      <div role="button" className="name" tabIndex={0}>
+          <img className="__button" src={icon} alt="add"></img>
+          <p className="maintitle">ScheduMate</p>
         </div>
+    
+    <div className="landing-flex">
+      <div className="left"> 
         <div className="centered">
-          <img
-            className="avatar-woman"
-            src={LandingImg}
-            alt="Avatar woman"
-          ></img>
+          <img className="avatar-woman" src={LandingImg} alt="Avatar woman"></img>
         </div>
       </div>
 
-      <div className="split right">
+      <div className="right">
         <div className="centered">
-          <p className="welcome-message">Welcome to</p>
-          <h2>ScheduLens - Never miss a class with a friend again!</h2>
+          <strong><p className="welcome-message">Welcome to ScheduMate</p></strong>
+          <h2 className="h2-font">Never miss a class with a friend again!</h2>
           <p>
-            ScheduLens is an application that allows you to easily see the
+            ScheduMate is an application that allows you to easily see the
             classes that you have in common with your friends. Friends make
             classes so much better!
           </p>
           {user.$id ? (
             <p>
-              <Link className="landingButton" to="/home">
+              <Link className="landing-button" to="/home">
                 Get Started
               </Link>
             </p>
           ) : (
-            <p>
-              <Link className="landingButton" to="/signup">
+            <p className="button-group">
+              <Link className="landing-button" to="/signup">
                 Sign up
               </Link>
-              <Link className="landingButton" to="/login">
+              <Link className="landing-button" to="/login">
                 Login
               </Link>
             </p>
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

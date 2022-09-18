@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../context/AuthContext';
 import NavBar from '../../components/navbar/navbar';
+import './Home.scss'
 
 const Home = () => {
     const { user, logout } = UserAuth();
@@ -20,12 +21,16 @@ const Home = () => {
     return (
         <div>
             <NavBar ></NavBar>
-            <h1>Home</h1>
-            <p>
+            <h1 className="heading2">Home</h1>
+            <div className="landing-flex-home">
+            <div className='left-home'>left</div>
+            <div className='right-home'>right</div>
+            </div>
+            {/* <p>
                 User Email: {user && user.email} 
                 User Id: {user.uid}
-            </p>
-            <button onClick={handleLogout}>Logout</button>
+            </p> */}
+            
         </div>
     )
 }

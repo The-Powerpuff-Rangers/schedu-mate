@@ -120,7 +120,7 @@ export default function Schedule() {
     <div className="App">
       <NavBar active={"schedule"}></NavBar>
       <br></br>
-      <h1>My Schedule</h1>
+      <h1 className="heading2">My Schedule</h1>
       {/* <button onClick={fetchClasses}>getData</button> */}
       <Calendar
         localizer={localizer}

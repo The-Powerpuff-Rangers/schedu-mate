@@ -30,11 +30,11 @@ const Mats = () => {
   return (
     <div>
       <NavBar active={"friends"}></NavBar>
-      <h1>Add Friends</h1>
+      <h1 className='heading2'>Add Friends</h1>
 
       <div className="searchbar">
         <input
-          className="searchbar"
+          className="searchbar  inside"
           onChange={searchItems}
           placeholder="search and add new friends by email"
         ></input>
