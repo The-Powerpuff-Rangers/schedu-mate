@@ -26,7 +26,7 @@ const Landing = () => {
       <div className="right">
         <div className="centered">
           <strong><p className="welcome-message">Welcome to ScheduMate</p></strong>
-          <h2 className="h2-font">Never miss a class with a friend again!</h2>
+          <h2 className="h2-font">Got classes common with friends? Sync now </h2>
           <p className='paragraph'>
             ScheduMate is an application that allows you to easily see the
             classes that you have in common with your friends. Friends make
