@@ -13,6 +13,7 @@ import Schedule from "./pages/my-schedule/Schedule.js";
 import Profile from "./pages/profile/Profile";
 import Mats from "./pages/add-mates/Mats.js";
 import Notes from "./pages/notes/Notes.js";
+import NewGroup from "./pages/newgroup/NewGroup.js";
 
 function App() {
   return (
@@ -97,6 +98,15 @@ function App() {
           element={
             <ProtectedRoute>
               <Notes />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/home/newgroup"
+          exact
+          element={
+            <ProtectedRoute>
+              <NewGroup />
             </ProtectedRoute>
           }
         />
