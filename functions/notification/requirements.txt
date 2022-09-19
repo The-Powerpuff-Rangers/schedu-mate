@@ -1,0 +1,4 @@
+appwrite
+beautifulsoup4
+requests
+
