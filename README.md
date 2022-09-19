@@ -1,5 +1,7 @@
 # ScheduMate
 
+> Winner at Hack The Mountains 3.0 MLH Track - Best use of Appwrite 
+
 <center>
 <a href = "https://github.com/The-Powerpuff-Boys/schedu-mate/issues"><img src = https://img.shields.io/github/issues/The-Powerpuff-Boys/schedu-mate></a>
 <a href = "https://github.com/The-Powerpuff-Boys/schedu-mate/fork"><img src = https://img.shields.io/github/forks/The-Powerpuff-Boys/schedu-mate></a>
@@ -84,7 +86,7 @@ cd schedu-mate
 npm install && npm start
 ```
 
-Tu run it locally - go over to [https://localhost:5000](https://localhost:5000)
+Tu run it locally - go over to [https://localhost:3000](https://localhost:3000)
 
 To setup appwrite, there are some cloud functions well written for you by us😉. You can find them in the cloud functions. To run those cloud functions, follow the instructions [here](https://appwrite.io/docs/functions).
 It's recommended to install appwrite CLI to deploy those cloud functions easily. More about it [here](https://appwrite.io/docs/command-line)
@@ -99,7 +101,7 @@ If you want to just try out the demo, you can use the following credentials:
 
 - backend-server: [appwrite.schedumate.study](https://appwrite.schedumate.study)
 
-**NOTE:** For Backend server, DM me if you just want to see the credentials. I will provide you with the credentials.
+**NOTE:** For Backend server, DM me if you just want to see the credentials. I will provide you with the credentials if you want to see how it looks😉
 
 ## What we learned?
 
