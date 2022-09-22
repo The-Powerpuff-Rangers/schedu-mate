@@ -1,26 +1,75 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserAuth } from "../../context/AuthContext";
 import NavBar from "../../components/navbar/navbar";
 import "./Home.scss";
+import { db } from "../../appwrite";
+import Linkify from "react-linkify";
 
 const Home = () => {
-  const { user, logout } = UserAuth();
   const navigate = useNavigate();
-  const handleLogout = async () => {
-    try {
-      await logout();
-      console.log(user);
-      navigate("/");
-      console.log("you are logged out");
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
-
   const handleNewGroup = () => {
     navigate("/home/newgroup");
   };
+
+  //parse anchor tags
+  const parseAnchorTags = (text) => {
+    return (
+      <Linkify
+        componentDecorator={(decoratedHref, decoratedText, key) => (
+          <div className="home-element">
+            <a href={decoratedHref} key={key} target="_blank" rel="noreferrer">
+              {decoratedText}
+            </a>
+          </div>
+        )}
+      >
+        {text}
+      </Linkify>
+    );
+  };
+
+  const [notice, setNotice] = useState([]);
+
+  const [news, setNews] = useState([]);
+
+  const getNotices = async () => {
+    const notices = await db.listDocuments(
+      process.env.REACT_APP_APPWRITE_DATABASE_ID,
+      process.env.REACT_APP_NOTICE_COLLECTION_ID
+    );
+    const parseNotices = notices.documents.map((notice) => {
+      let href = notice.notice.match(/(?<=href=").+(?=")/g); // returns "exampleLink"
+      let inText = notice.notice.match(/(?<=>).+(?=<)/g); // returns "exampleText"
+      return {
+        href: href,
+        inText: inText,
+      };
+    });
+    setNotice(parseNotices);
+    // setNotice(notices.documents);
+  };
+
+  const getNews = async () => {
+    const news = await db.listDocuments(
+      process.env.REACT_APP_APPWRITE_DATABASE_ID,
+      process.env.REACT_APP_NEWS_COLLECTION_ID
+    );
+    const parseNews = news.documents.map((news) => {
+      let href = news.news.match(/(?<=href=").+(?=")/g); // returns "exampleLink"
+      let inText = news.news.match(/(?<=>).+(?=<)/g); // returns "exampleText"
+      return {
+        href: href,
+        inText: inText,
+      };
+    });
+    setNews(parseNews);
+    // setNews(news.documents);
+  };
+
+  useEffect(() => {
+    getNotices();
+    getNews();
+  }, []);
 
   return (
     <div className="home-main">
@@ -28,40 +77,35 @@ const Home = () => {
       <h1 className="heading2">Home</h1>
       <div className="landing-flex-home">
         <div className="left-home">
-          <div className='home-heading'>
-            Latest News
-          </div>
-          <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/result-of-upgradation-2022-23_OEz7enX.pdf'>Result of Upgradation 2022-23</a>
-          </div>
-          <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/extension-of-last-date-of-fee-submission-ay-2022-23.pdf'>Extension of Last Date of Fee Submission A.Y. 2022-23</a>
-          </div>
-          <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/nsp-portal-under-three-central-sector-scholarship-schemes-for-minority-community-st_u1VbVfT.pdf'> NSP portal under three Central Sector Scholarship Schemes for Minority Community Students for Academic Year 2022-23</a>
-          </div>
-          <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/registration-form-of-hostel-for-1st-year-students.pdf'>Registration form of hostel for 1st year students</a>
-          </div>
-          </div>
+          <div className="home-heading">Latest News</div>
+
+          {notice.map((notice) => {
+            return (
+              <div className="home-element">
+                <a href={notice.href} target="_blank" rel="noreferrer">
+                  {notice.inText}
+                </a>
+              </div>
+            );
+          })}
+</div>
+         
+       
         <div className="right-home">
-          <div className='home-heading'>
-            Notices
+          <div className="home-heading">Notices</div>
+        {news.map((news) => {
+          return (
+            <div className="home-element">
+              <a href={news.href} target="_blank" rel="noreferrer">
+                {news.inText}
+              </a>
             </div>
-            <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/news/admission-notice-academic-session-2022-23_C9GHkDO.pdf'>Admission Notice Academic Session 2022-23</a>
-          </div>
-          <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/notices/time-table-_sep-dec_2022.pdf'>Time Table Sep-Dec 2022</a>
-          </div>
-          <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/notices/participation-in-national-research-paper-writing-competition-under-the-theme-sub_uXRz2B3.pdf'>Participation in National Research Paper Writing Competition under the theme "Subhash-Swaraj-Sarkar"</a>
-          </div>
-          <div className='home-element'>
-            <a target="_blank" rel="noopener noreferrer" href='https://www.msit.in/media/notices/pragati-and-saksham-scholarship-scheme.pdf'>Pragati and Saksham scholarship scheme</a>
-          </div>
-            </div>
+          );
+        })}
         
+       
+      
+        </div>
       </div>
       <button onClick={handleNewGroup} className="landing-button margin">
         Add Group
