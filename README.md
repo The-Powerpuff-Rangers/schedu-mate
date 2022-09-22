@@ -1,6 +1,6 @@
 # ScheduMate
 
-> Winner at Hack The Mountains 3.0 MLH Track - Best use of Appwrite 
+> Winner at Hack The Mountains 3.0 MLH Track - Best use of Appwrite
 
 <center>
 <a href = "https://github.com/The-Powerpuff-Boys/schedu-mate/issues"><img src = https://img.shields.io/github/issues/The-Powerpuff-Boys/schedu-mate></a>
@@ -20,6 +20,7 @@ ScheduMate is a web application that allows you to easily see the classes that y
 - [Challenges we ran into?](#challenges-we-ran-into)
 - [Accomplishments that we're proud of?](#accomplishments-that-were-proud-of)
 - [Installation](#installation)
+- [Directory Structure](#directory-structure)
 - [Demo Credentials](#demo-credentials)
 - [What we learned?](#what-we-learned)
 - [Future Scopes](#future-scope)
@@ -92,6 +93,42 @@ To setup appwrite, there are some cloud functions well written for you by us😉
 It's recommended to install appwrite CLI to deploy those cloud functions easily. More about it [here](https://appwrite.io/docs/command-line)
 
 > Also edit the `.env` file and update the variables. This should be pretty self-explanatory although we would be happy to help you out if you face any issues. If there is feel free to create an issue.
+
+## Directory Structure
+
+```bash
+.
+├── functions # Cloud Functions
+│   ├── deleteUsers
+│   │   └── lib
+│   ├── notification
+│   │   └── src
+│   └── schedumate_setup
+│       └── lib
+├── public # Public Assets
+└── src # React App
+    ├── assets # Assets
+    ├── components # Components
+    │   ├── CourseCard
+    │   ├── class
+    │   ├── name
+    │   ├── navbar
+    │   └── profile
+    ├── context # Contexts
+    └── pages # Pages
+        ├── add-classes
+        ├── add-mates
+        ├── classes
+        ├── details
+        ├── home
+        ├── landing
+        ├── login
+        ├── my-schedule
+        ├── newgroup
+        ├── notes
+        ├── profile
+        └── signup
+```
 
 ## Demo Credentials
 
