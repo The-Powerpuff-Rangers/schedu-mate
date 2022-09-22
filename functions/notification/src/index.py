@@ -4,6 +4,8 @@ from appwrite.services.databases import Databases
 from bs4 import BeautifulSoup
 import requests
 
+# TODO: Error Handling
+
 
 def crawlingNews():
 
@@ -31,16 +33,15 @@ def crawlingMarq():
     return marq_link
 
 
-def put_data(database, res):
+def put_data(database):
     news = converter(crawlingNews)
     notice = converter(crawlingNotice)
-    # marq = converter(crawlingMarq)
-    for i in news:
-        x = database.create_document('schedumate', 'news',
-                                     'unique()', {'news': i},)
-        res.json({
-            "logs": x,
-        })
+    for i in range(0, 5):
+        database.create_document('schedudb', 'news',
+                                 'unique()', {'news': news[i]},)
+    for j in range(0, 5):
+        database.create_document('schedudb', 'notice',
+                                 'unique()', {'notice': notice[j]},)
 
 
 def converter(func_name):
@@ -78,19 +79,23 @@ def main(req, res):
 
     if not req.variables.get('APPWRITE_FUNCTION_ENDPOINT') or not req.variables.get('APPWRITE_FUNCTION_API_KEY'):
         print('Environment variables are not set. Function cannot use Appwrite SDK.')
+        return res.json({
+            "message": "Environment variables are not set. Function cannot use Appwrite SDK."})
+    # if (1+1 != 2):
+    #     print('Something went wrong')
     else:
         (
             client
-            .set_endpoint(req.variables.get('APPWRITE_FUNCTION_ENDPOINT', None))
-            .set_project(req.variables.get('APPWRITE_FUNCTION_PROJECT_ID', None))
-            .set_key(req.variables.get('APPWRITE_FUNCTION_API_KEY', None))
-            .set_self_signed(True)
+            .set_endpoint(req.variables.get('APPWRITE_FUNCTION_ENDPOINT'))
+            .set_project('schedumate')
+            .set_key(req.variables.get('APPWRITE_FUNCTION_API_KEY'))
         )
 
-    put_data(database, res)
+        put_data(database)
 
-    return res.json({
-        "areDevelopersAwesome": True,
-    })
+    # return res.json({
+    #     "areDevelopersAwesome": True,
+    # })
 
 
+# main()
