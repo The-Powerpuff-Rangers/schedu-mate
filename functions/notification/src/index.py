@@ -39,20 +39,21 @@ def put_data(database):
     for i in range(0, 5):
         database.create_document('schedudb', 'news',
                                  'unique()', {'news': news[i]},)
+        i += 1
     for j in range(0, 5):
         database.create_document('schedudb', 'notice',
                                  'unique()', {'notice': notice[j]},)
+        j += 1
 
 
 def converter(func_name):
     temp = func_name()
     list = []
     for url in temp:
-
-        st = str(temp[0])
+        st = str(url)
         start = st[:9]
         end = st[9:]
-        final = start+"http://msit.in/notices"+end
+        final = start+"http://msit.in/"+end
         list.append(final)
     return list
 
@@ -81,8 +82,6 @@ def main(req, res):
         print('Environment variables are not set. Function cannot use Appwrite SDK.')
         return res.json({
             "message": "Environment variables are not set. Function cannot use Appwrite SDK."})
-    # if (1+1 != 2):
-    #     print('Something went wrong')
     else:
         (
             client
@@ -92,10 +91,3 @@ def main(req, res):
         )
 
         put_data(database)
-
-    # return res.json({
-    #     "areDevelopersAwesome": True,
-    # })
-
-
-# main()
