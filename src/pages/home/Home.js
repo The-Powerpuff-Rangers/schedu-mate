@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/navbar/navbar";
 import "./Home.scss";
 import { db } from "../../appwrite";
-import Linkify from "react-linkify";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -11,22 +10,6 @@ const Home = () => {
     navigate("/home/newgroup");
   };
 
-  //parse anchor tags
-  const parseAnchorTags = (text) => {
-    return (
-      <Linkify
-        componentDecorator={(decoratedHref, decoratedText, key) => (
-          <div className="home-element">
-            <a href={decoratedHref} key={key} target="_blank" rel="noreferrer">
-              {decoratedText}
-            </a>
-          </div>
-        )}
-      >
-        {text}
-      </Linkify>
-    );
-  };
 
   const [notice, setNotice] = useState([]);
 
