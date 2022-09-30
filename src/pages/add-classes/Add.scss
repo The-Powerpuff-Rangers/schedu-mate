@@ -14,14 +14,14 @@
   justify-content: center;
   display: flex;
   width: 60%;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border-radius: 2em;
-  padding: 2em;
+  padding: 10em;
   margin: 0em;
-  height: 70%;
+  // height: 100vh;
   box-shadow: 1em 1em 3em #c9c9c9;
   .add-class {
-    width: 80%;
+    height: fit-content;
   }
   .field {
     padding: 0.3em;
@@ -32,10 +32,17 @@
   }
   .control {
     width: 100%;
+    height: 10em;
+    padding: 1em;
+    font-size: large;
+    color: #333;
+    border: 1px solid #333;
+    margin-top: 0.1em;
+  }
+  .control-2 {
+    width: 100%;
     height: 2em;
     color: #333;
-    margin-top: 0.1em;
-    padding-top: 0.1em;
   }
   .is-grouped {
     justify-content: flex-start;

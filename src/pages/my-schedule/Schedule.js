@@ -66,21 +66,23 @@ export default function Schedule() {
   useEffect(() => {
     const fetchDatas = async () => {
       const listOfData = await fetchClasses();
-      console.log(listOfData);
+      // console.log(listOfData.documents[0].startdate.substring(10, 8));
       const calData = listOfData.documents.map((data) => {
+        var currStartDate = parseInt(data.startdate.substring(10, 8)) - 1;
+        var currEndDate = parseInt(data.enddate.substring(10, 8)) - 1;
         const currData = {
           title: data.classname,
           start: new Date(
-            2022,
-            8,
-            17,
+            data.startdate.substring(0, 4),
+            currStartDate,
+            data.startdate.substring(7, 5),
             data.starttime.substring(0, 2),
             data.starttime.slice(3)
           ),
           end: new Date(
-            2022,
-            8,
-            18,
+            data.enddate.substring(0, 4),
+            currEndDate,
+            data.enddate.substring(7, 5),
             data.endtime.substring(0, 2),
             data.endtime.slice(3)
           ),
@@ -115,11 +117,10 @@ export default function Schedule() {
   // function handleAddEvent() {
   //   setAllEvents([...allEvents, newEvent]);
   // }
-
   return (
     <div className="App">
       <NavBar active={"schedule"}></NavBar>
-     
+
       <h1 className="heading2">My Schedule</h1>
       {/* <button onClick={fetchClasses}>getData</button> */}
       <Calendar

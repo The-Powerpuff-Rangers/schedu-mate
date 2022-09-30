@@ -7,18 +7,6 @@ import CourseCard from "../../components/CourseCard/CourseCard";
 import { Navigate, Redirect, useNavigate } from "react-router-dom";
 
 const AddClasses = () => {
-  /**
-   * Object property:
-   * Class Name:
-   * Class Number:
-   * Days:
-   * Start time:
-   * End time:
-   *
-   * Create a large array [];
-   * On submit add object to the array;
-   * Add array to database
-   */
   const { user } = UserAuth();
 
   // varaibles
@@ -27,6 +15,8 @@ const AddClasses = () => {
   const [day, setDay] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
   const [courses, setCourses] = useState([]); // array
   const [courseList, setCourseList] = useState([]); // array
 
@@ -38,6 +28,8 @@ const AddClasses = () => {
       classname: courseName,
       classcode: courseCode,
       days: day,
+      startdate: startDate,
+      enddate: endDate,
       starttime: startTime,
       endtime: endTime,
     };
@@ -59,23 +51,13 @@ const AddClasses = () => {
       course
     );
   };
-  // useEffect(() => {
-  //   const getCourses = async () => {
-  //     // gives the list of courses
-  //     // const list = await db.listDocuments(process.env.REACT_APP_APPWRITE_DATABASE_ID, process.env.REACT_APP_CLASSES_COLLECTION_ID, /);
-  //     console.log(list);
-
-  //     setCourseList(list);
-  //     // console.log(courseList);
-  //   };
-  //   getCourses();
-  //   // console.log(courseList);
-  // },[]);
 
   const Clear = () => {
     setCourseName("");
     setCourseCode("");
     setDay({ selected: "" });
+    setStartDate("");
+    setEndDate("");
     setStartTime("");
     setEndTime("");
   };
@@ -140,6 +122,34 @@ const AddClasses = () => {
                   <option>Sunday</option>
                 </select>
               </div>
+              {/* Start Date */}
+              <div className="field">
+                <label className="label">Start Date</label>
+                <input
+                  className="control"
+                  onChange={(e) => setStartDate(e.target.value)}
+                  type="date"
+                  name="date"
+                  id="date"
+                  required
+                  autoComplete="off"
+                  value={startDate}
+                ></input>
+              </div>
+              {/* End Date */}
+              <div className="field">
+                <label className="label">End Date</label>
+                <input
+                  className="control"
+                  onChange={(e) => setEndDate(e.target.value)}
+                  type="date"
+                  name="date"
+                  id="date"
+                  required
+                  autoComplete="off"
+                  value={endDate}
+                ></input>
+              </div>
               {/* Start time */}
               <div className="field">
                 <label className="label">Start time</label>
@@ -170,12 +180,12 @@ const AddClasses = () => {
               </div>
               {/* Buttons */}
               <div className="field is-grouped">
-                <div className="control">
+                <div className="control-2">
                   <button type="submit" className="button is-link">
                     Add
                   </button>
                 </div>
-                <div className="control">
+                <div className="control-2">
                   <button className="button is-link is-light" onClick={Clear}>
                     Clear
                   </button>
