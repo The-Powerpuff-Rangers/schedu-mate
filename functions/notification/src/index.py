@@ -89,5 +89,8 @@ def main(req, res):
             .set_project('schedumate')
             .set_key(req.variables.get('APPWRITE_FUNCTION_API_KEY'))
         )
-
-        put_data(database)
+        try:
+            put_data(database)
+            return res.json({"message": "Data added successfully"})
+        except Exception as e:
+            return res.json({"message": str(e)})

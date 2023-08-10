@@ -13,10 +13,7 @@ abstract class ScheduMate {
 /// Create users Collection
 Future<void> createUsers(Databases db) async {
   try {
-    await db.createCollection(
-        databaseId: ScheduMate.scheduDB,
-        collectionId: ScheduMate.usersCollection,
-        name: 'Users');
+    await db.createCollection(databaseId: ScheduMate.scheduDB, collectionId: ScheduMate.usersCollection, name: 'Users');
 
     Future.wait([
       db.createStringAttribute(
@@ -31,10 +28,7 @@ Future<void> createUsers(Databases db) async {
           key: 'datebirth',
           xrequired: false),
       db.createEmailAttribute(
-          databaseId: ScheduMate.scheduDB,
-          collectionId: ScheduMate.usersCollection,
-          key: 'email',
-          xrequired: false),
+          databaseId: ScheduMate.scheduDB, collectionId: ScheduMate.usersCollection, key: 'email', xrequired: false),
       db.createStringAttribute(
           databaseId: ScheduMate.scheduDB,
           collectionId: ScheduMate.usersCollection,
@@ -60,10 +54,7 @@ Future<void> createUsers(Databases db) async {
           size: 255,
           xrequired: false),
       db.createIntegerAttribute(
-          databaseId: ScheduMate.scheduDB,
-          collectionId: ScheduMate.usersCollection,
-          key: 'mobile',
-          xrequired: false),
+          databaseId: ScheduMate.scheduDB, collectionId: ScheduMate.usersCollection, key: 'mobile', xrequired: false),
       db.createStringAttribute(
           databaseId: ScheduMate.scheduDB,
           collectionId: ScheduMate.usersCollection,
@@ -95,10 +86,7 @@ Future<void> createUsers(Databases db) async {
           size: 255,
           xrequired: false),
       db.createBooleanAttribute(
-          databaseId: ScheduMate.scheduDB,
-          collectionId: ScheduMate.usersCollection,
-          key: 'isadmin',
-          xrequired: false),
+          databaseId: ScheduMate.scheduDB, collectionId: ScheduMate.usersCollection, key: 'isadmin', xrequired: false),
     ]);
   } catch (e) {
     log('UsersError: $e');
@@ -108,10 +96,7 @@ Future<void> createUsers(Databases db) async {
 /// Create group Collection
 Future<void> createGroup(Databases db) async {
   try {
-    await db.createCollection(
-        databaseId: ScheduMate.scheduDB,
-        collectionId: ScheduMate.groupCollection,
-        name: 'Group');
+    await db.createCollection(databaseId: ScheduMate.scheduDB, collectionId: ScheduMate.groupCollection, name: 'Group');
 
     Future.wait([
       db.createStringAttribute(
@@ -161,9 +146,7 @@ Future<void> createGroup(Databases db) async {
 Future<void> createClasses(Databases db) async {
   try {
     await db.createCollection(
-        databaseId: ScheduMate.scheduDB,
-        collectionId: ScheduMate.classesCollection,
-        name: 'Classes');
+        databaseId: ScheduMate.scheduDB, collectionId: ScheduMate.classesCollection, name: 'Classes');
     Future.wait([
       db.createStringAttribute(
           databaseId: ScheduMate.scheduDB,
@@ -232,9 +215,7 @@ Future<void> createClasses(Databases db) async {
 Future<void> createAssignments(Databases db) async {
   try {
     await db.createCollection(
-        databaseId: ScheduMate.scheduDB,
-        collectionId: ScheduMate.assignmentCollection,
-        name: 'Assignments Projects');
+        databaseId: ScheduMate.scheduDB, collectionId: ScheduMate.assignmentCollection, name: 'Assignments Projects');
     Future.wait([
       db.createStringAttribute(
           databaseId: ScheduMate.scheduDB,
@@ -253,23 +234,16 @@ Future<void> createAssignments(Databases db) async {
   }
 }
 
-void main(final req, final res) async {
-final Client = client
-        .setEndpoint(req.variables['APPWRITE_FUNCTION_ENDPOINT'])
-        .setProject(req.variables['APPWRITE_FUNCTION_PROJECT_ID'])
-        .setKey(req.variables['APPWRITE_FUNCTION_API_KEY'])
-        .setSelfSigned(status: true);
+void main() async {
+  final Client client = Client().setEndpoint('https://cloud.appwrite.io/v1').setProject('schedumate').setKey(
+      '0be105f986921b89c07487a8bb86c0a72b90dbce21150c05b03fb4cb11c3eae1a40327859824a6fe06a36be9513ecf6c78508027b243ca4a929480f565c8466078c5f4aa5fdc70e70f2a9399b85ee4ebafaf18b30d9e69bc697e9e760015604e04a0ef296eb09ca5751764f2de2aeba9555e6ce7a408ec884d3c15b71ff0fea6');
 
   final Databases databases = Databases(client);
 
   try {
-    Future.wait([
-      createUsers(databases),
-      createGroup(databases),
-      createClasses(databases),
-      createAssignments(databases)
-    ]);
+    Future.wait(
+        [createUsers(databases), createGroup(databases), createClasses(databases), createAssignments(databases)]);
   } catch (e) {
-    log('Main Function: $e');
+    throw e;
   }
 }

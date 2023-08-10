@@ -1,0 +1,50 @@
+{
+    "projectId": "schedumate",
+    "projectName": "Schedu Mate",
+    "functions": [
+        {
+            "$id": "setupProject",
+            "name": "Setup Project",
+            "runtime": "dart-2.17",
+            "path": "functions/schedumate_setup",
+            "entrypoint": "lib/main.dart",
+            "ignore": [
+                ".packages",
+                ".dart_tool"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        },
+        {
+            "$id": "deleteUsers",
+            "name": "Delete All Users",
+            "runtime": "dart-2.17",
+            "path": "functions/deleteUsers",
+            "entrypoint": "lib/main.dart",
+            "ignore": [
+                ".packages",
+                ".dart_tool"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        },
+        {
+            "$id": "notification",
+            "name": "Notification Fetcher",
+            "runtime": "python-3.9",
+            "path": "functions/notification",
+            "entrypoint": "src/index.py",
+            "ignore": [
+                "__pypackages__"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        }
+    ]
+}

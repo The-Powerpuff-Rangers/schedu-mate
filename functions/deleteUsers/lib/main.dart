@@ -17,12 +17,8 @@ import 'package:dart_appwrite/models.dart';
 Future<void> start(final req, final res) async {
   Client client = Client();
 
-  // You can remove services you don't use
-  Users users = Users(client);
-  if (req.variables['APPWRITE_FUNCTION_ENDPOINT'] == null ||
-      req.variables['APPWRITE_FUNCTION_API_KEY'] == null) {
-    print(
-        "Environment variables are not set. Function cannot use Appwrite SDK.");
+  if (req.variables['APPWRITE_FUNCTION_ENDPOINT'] == null || req.variables['APPWRITE_FUNCTION_API_KEY'] == null) {
+    print("Environment variables are not set. Function cannot use Appwrite SDK.");
   } else {
     client
         .setEndpoint(req.variables['APPWRITE_FUNCTION_ENDPOINT'])
@@ -31,10 +27,12 @@ Future<void> start(final req, final res) async {
         .setSelfSigned(status: true);
   }
 
+  // You can remove services you don't use
+  Users users = Users(client);
+
   await users.list().then((response) async {
     final userList = response.users;
-    await Future.forEach<User>(
-        userList, (user) => users.delete(userId: user.$id));
+    await Future.forEach<User>(userList, (user) => users.delete(userId: user.$id));
   }).catchError((error) {
     res.json(error);
   });
